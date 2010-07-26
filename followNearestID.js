@@ -8,7 +8,7 @@ function getDescendantID(node) {
   };
   return false;
 };
-                                                                             
+
 function getContextID(node) {
   var previous = null;
   var id;
@@ -20,7 +20,7 @@ function getContextID(node) {
   };
   return false;
 };
-                                                                             
+
 function getSelectionNode() { return window.getSelection().baseNode; };
 function makeURI(base, id) {
   var hashIndex = base.lastIndexOf('#');
