@@ -4,6 +4,8 @@ function getPreviousID(node, maxdepth) {
    *   or completely for `maxdepth < 0`.
    */
 
+  if (maxdepth == undefined) maxdepth = -1;
+
   function getDescendantID(node, depth) {
     if (depth == maxdepth) return false;
     var child = node.firstChild;
@@ -36,8 +38,17 @@ function makeURI(base, id) {
 };
 
 function followPreviousID(maxdepth) {
+  /* Iterate backward and upward through the DOM,
+   *   looking for a node with an ID attribute.
+   * `maxdepth` determines the depth to which previous nodes are searched.
+   * By default this will be a depth of 2.
+   * Passing 0 will prevent searching in subnodes.
+   * Passing -1 will result in a full traversal of the previous DOM nodes.
+   */
+  if (maxdepth == undefined) maxdepth = 2;
+
   var id = getPreviousID(getSelectionNode(), maxdepth);
   if (id) { document.location.href = makeURI(document.location.href, id); };
 };
 
-followPreviousID(2);
+followPreviousID();
