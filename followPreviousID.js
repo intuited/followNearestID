@@ -7,7 +7,7 @@
 /*jslint browser: true, onevar: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, newcap: true, immed: true */
 /*global window */
 
-(function() {
+(function(maxdepth) {
     var getPreviousID, getSelectionNode, makeURI, followPreviousID;
 
     getPreviousID = function(node, maxdepth) {
@@ -70,5 +70,5 @@
         }
     };
 
-    followPreviousID();
+    followPreviousID(maxdepth);
 }());
