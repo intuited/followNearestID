@@ -27,6 +27,7 @@
             child = node.firstChild;
             while (child) {
                 if (child.id) { return child.id; }
+                if (child.name) { return child.name; }
                 descendant_id = getDescendantID(child, depth + 1);
                 if (descendant_id) { return descendant_id; }
                 child = child.nextSibling;
@@ -37,6 +38,7 @@
         previous = null;
         while (node) {
             if (node.id) { return node.id; }
+            if (node.name) { return node.name; }
             /* Only recurse into siblings; children have already been searched. */
             if (previous && (id = getDescendantID(node, 0))) { return id; }
             node = (previous = node.previousSibling) || node.parentNode;
