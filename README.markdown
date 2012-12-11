@@ -16,6 +16,9 @@ Tested on Chrome and Chrome only.
 
 Doesn't rely on any external frameworks.
 
+Started life as [gist #489116](http://gist.github.com/489116).
+
+
 TODO
 ----
 
