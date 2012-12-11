@@ -8,6 +8,7 @@ If it finds one, updates the document URL to include that fragment.
 
 The main function is parameterized
 to allow the maximum search depth to be limited.
+The depth defaults to 2; passing -1 will give an unlimited search depth.
 
 Useful for bookmarklets.
 
@@ -18,5 +19,5 @@ Doesn't rely on any external frameworks.
 TODO
 ----
 
--   Create a Makefile of some variety that spits out a minified bookmarklet
+-   Create a Makefile of some variety that spits out minified text suitable for a bookmarklet
 -   Write some tests
